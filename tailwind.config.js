@@ -11,19 +11,21 @@ export default {
             },
 
             colors: {
-                ink: "#17121A",
-                plum: "#241827",
-                plumLight: "#302035",
+                ink: "#241B24",
+                plum: "#352637",
+                plumLight: "#4A3B50",
 
-                surface: "#201821",
-                surfaceLight: "#2A202B",
+                surface: "#2A2228",
+                surfaceLight: "#382F36",
 
-                accent: "#C88FA0",
-                blush: "#E8B8C8",
-                cream: "#F7F1F3",
-                mauve: "#A99AA5",
+                accent: "#B98294",
+                blush: "#DDB8C3",
+                cream: "#FAF7F8",
+                mauve: "#8E818B",
 
-                line: "#3A303A",
+                champagne: "#D8C3A5",
+
+                line: "#E6DDE1",
             },
 
             letterSpacing: {
@@ -31,16 +33,16 @@ export default {
             },
 
             boxShadow: {
-                rose: "0 20px 80px rgba(200, 143, 160, 0.16)",
-                roseStrong: "0 20px 100px rgba(200, 143, 160, 0.25)",
+                rose: "0 20px 80px rgba(185, 130, 148, 0.16)",
+                roseStrong: "0 20px 100px rgba(185, 130, 148, 0.25)",
             },
 
             backgroundImage: {
-                "rose-gradient": "linear-gradient(135deg, #C88FA0 0%, #E8B8C8 100%)",
+                "rose-gradient": "linear-gradient(135deg, #B98294 0%, #DDB8C3 100%)",
 
-                "plum-gradient": "linear-gradient(135deg, #17121A 0%, #302035 100%)",
+                "plum-gradient": "linear-gradient(135deg, #241B24 0%, #4A3B50 100%)",
 
-                "hero-gradient": "radial-gradient(circle at 50% 45%, rgba(200, 143, 160, 0.12), transparent 35%)",
+                "hero-gradient": "radial-gradient(circle at 50% 45%, rgba(185, 130, 148, 0.14), transparent 35%)",
             },
         },
     },

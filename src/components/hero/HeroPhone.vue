@@ -11,7 +11,6 @@ const phoneNotch = ref(null);
 const glitterRef = ref(null);
 const scrollPrompt = ref(null);
 
-// Chat Element Refs
 const turn1Q = ref(null);
 const turn1A = ref(null);
 const text1 = ref(null);
@@ -29,7 +28,6 @@ const turn4A = ref(null);
 const text4 = ref(null);
 
 onMounted(() => {
-    // Ambient glittering background particles
     const particles = glitterRef.value.querySelectorAll(".g-particle");
     particles.forEach((p) => {
         gsap.to(p, {
@@ -50,7 +48,6 @@ onMounted(() => {
     }
 
     const context = gsap.context(() => {
-        // Unified Pinned ScrollTrigger Timeline
         const timeline = gsap.timeline({
             scrollTrigger: {
                 trigger: ".hero-animation",
@@ -59,72 +56,73 @@ onMounted(() => {
                 scrub: 1,
                 pin: true,
                 anticipatePin: 1,
-                invalidateOnRefresh: true, // Recalculate dimensions on mobile viewport height changes
+                invalidateOnRefresh: true,
             },
         });
 
         timeline
-            // 1. Fade out the initial prompt overlay inside the phone screen
             .to(scrollPrompt.value, { opacity: 0, scale: 0.9, duration: 0.03, ease: "power2.in" }, 0)
 
-            // 2. Q&A Turn 1 Sequence
+            .to(phone.value, { width: "100%", height: "100%", borderRadius: 0, borderWidth: 0, duration: 0.5, ease: "power2.out" }, 0.02)
+            .to(phoneNotch.value, { opacity: 0, scale: 0.5, duration: 0.15 }, 0.02)
+            .to(phoneScreen.value, { borderRadius: 0, duration: 0.5, ease: "power2.out" }, 0.02)
+            .to(phoneContent.value, { scale: 1, duration: 0.5, ease: "power2.out" }, 0.02)
+
             .fromTo(turn1Q.value, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.04 }, 0.03)
             .fromTo(turn1A.value, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.03 }, 0.07)
             .to(
                 text1.value,
                 {
-                    text: "I am a Frontend Developer specializing in Vue 3, JavaScript/TypeScript, and building scalable product interfaces with Tailwind & GSAP.",
+                    text: "I’m a Full-Stack Developer with 4 years of experience, building web products from frontend interfaces to backend APIs. I enjoy turning complex ideas into products people can actually use.",
                     duration: 0.08,
                     ease: "none",
                 },
                 0.08,
             )
 
-            // 3. Q&A Turn 2 Sequence
             .fromTo(turn2Q.value, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.04 }, 0.18)
             .fromTo(turn2A.value, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.03 }, 0.22)
             .to(
                 text2.value,
                 {
-                    text: "I take complex operational systems—like logistics and SaaS platforms—and simplify them into fast, intuitive, 60fps user experiences.",
+                    text: "I don’t just build screens. I think about the whole product—from how data flows through the system to how the final interaction feels for the user.",
                     duration: 0.08,
                     ease: "none",
                 },
                 0.23,
             )
 
-            // 4. Q&A Turn 3 Sequence
             .fromTo(turn3Q.value, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.04 }, 0.33)
             .fromTo(turn3A.value, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.03 }, 0.37)
             .to(
                 text3.value,
                 {
-                    text: "By combining modular architecture, performance-first rendering, and a product-minded approach that aligns design with backend capabilities.",
+                    text: "I keep things practical: understand the problem, design the right flow, build it cleanly, test the edge cases, and make sure frontend and backend work as one product.",
                     duration: 0.08,
                     ease: "none",
                 },
                 0.38,
             )
 
-            // 5. Q&A Turn 4 Sequence
             .fromTo(turn4Q.value, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.04 }, 0.48)
             .fromTo(turn4A.value, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.03 }, 0.52)
-            .to(text4.value, { text: "Yes! Open for full-time engineering roles. Let's connect below. 👇", duration: 0.08, ease: "none" }, 0.53)
+            .to(
+                text4.value,
+                {
+                    text: "Yes! I’m open to full-time Full-Stack opportunities where I can build, learn, and make a real impact. Let’s talk. 👇",
+                    duration: 0.08,
+                    ease: "none",
+                },
+                0.53,
+            );
 
-            // 6. Full viewport expansion transition (uses 100% to remain flush against pinned container)
-            .to(phone.value, { width: "100%", height: "100%", borderRadius: 0, borderWidth: 0, duration: 1, ease: "power3.inOut" }, 0.15)
-            .to(phoneNotch.value, { opacity: 0, scale: 0.5, duration: 0.2 }, 0.15)
-            .to(phoneScreen.value, { borderRadius: 0, duration: 1, ease: "power3.inOut" }, 0.15)
-            .to(phoneContent.value, { scale: 1, duration: 1, ease: "power3.out" }, 0.15);
-
-        // Navbar reveal threshold trigger
         ScrollTrigger.create({
             trigger: ".hero-animation",
             start: "top top",
             end: "+=2000",
             scrub: true,
             onUpdate: (self) => {
-                emit("revealNavbar", self.progress > 0.4);
+                emit("revealNavbar", self.progress > 0.25);
             },
         });
     });
@@ -135,7 +133,6 @@ onMounted(() => {
 
 <template>
     <section class="hero-animation relative min-h-screen overflow-hidden bg-ink py-0">
-        <!-- Background Particles -->
         <div ref="glitterRef" class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
             <span
                 v-for="n in 30"
@@ -157,19 +154,17 @@ onMounted(() => {
             class="absolute left-1/2 top-1/2 h-[300px] w-[300px] md:h-[500px] md:w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/[0.07] blur-[100px] z-0"
         ></div>
 
-        <!-- Phone Center Wrapper -->
         <div class="relative z-10 flex h-full min-h-screen flex-col items-center justify-center p-0">
             <div
                 ref="phone"
-                class="relative h-[460px] w-[250px] sm:h-[500px] sm:w-[260px] md:h-[540px] md:w-[275px] overflow-hidden rounded-[36px] md:rounded-[42px] border-[5px] md:border-[6px] border-plumLight bg-plum shadow-[0_30px_90px_rgba(0,0,0,0.55)] my-auto"
+                class="relative h-[500px] w-[270px] sm:h-[550px] sm:w-[290px] md:h-[600px] md:w-[310px] overflow-hidden rounded-[38px] md:rounded-[44px] border-[5px] md:border-[6px] border-plumLight bg-plum shadow-[0_30px_90px_rgba(0,0,0,0.55)] my-auto"
             >
                 <div ref="phoneNotch" class="absolute left-1/2 top-2 z-20 h-5 w-20 md:h-6 md:w-24 -translate-x-1/2 rounded-full bg-ink"></div>
 
-                <div ref="phoneScreen" class="relative h-full w-full overflow-hidden rounded-[30px] md:rounded-[36px] bg-plum">
+                <div ref="phoneScreen" class="relative h-full w-full overflow-hidden rounded-[32px] md:rounded-[38px] bg-plum">
                     <div class="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-accent/[0.10] blur-[80px]"></div>
                     <div class="absolute -bottom-20 -left-20 h-56 w-56 rounded-full bg-blush/[0.07] blur-[70px]"></div>
 
-                    <!-- Placeholder Prompt Overlay inside Phone -->
                     <div
                         ref="scrollPrompt"
                         class="absolute inset-0 z-10 flex flex-col items-center justify-center p-4 text-center pointer-events-none"
@@ -187,13 +182,11 @@ onMounted(() => {
                         </div>
                     </div>
 
-                    <!-- Phone Screen Active Chat Content -->
                     <div
                         ref="phoneContent"
                         class="relative flex h-full w-full scale-[0.96] flex-col justify-between p-3.5 sm:p-5 md:p-6 overflow-y-auto"
                     >
                         <div>
-                            <!-- Header -->
                             <div class="mb-2 sm:mb-2.5 flex items-center justify-between">
                                 <span class="display-font text-[10px] sm:text-[11px] md:text-xs font-semibold tracking-tight text-cream">
                                     Candidate Brief<span class="text-accent">.</span>
@@ -206,9 +199,7 @@ onMounted(() => {
 
                             <p class="mb-1.5 text-[6.5px] sm:text-[7.5px] md:text-[8px] uppercase tracking-[0.25em] text-mauve">Quick Overview</p>
 
-                            <!-- Chat Container -->
                             <div class="space-y-1.5 text-[7.5px] sm:text-[8.5px] md:text-[9.5px]">
-                                <!-- Turn 1 -->
                                 <div
                                     ref="turn1Q"
                                     class="opacity-0 rounded-lg rounded-tl-sm bg-white/[0.04] border border-white/[0.06] p-1.5 text-cream/90"
@@ -222,7 +213,6 @@ onMounted(() => {
                                     <span class="text-blush font-semibold">A:</span> <span ref="text1"></span>
                                 </div>
 
-                                <!-- Turn 2 -->
                                 <div
                                     ref="turn2Q"
                                     class="opacity-0 rounded-lg rounded-tl-sm bg-white/[0.04] border border-white/[0.06] p-1.5 text-cream/90"
@@ -236,7 +226,6 @@ onMounted(() => {
                                     <span class="text-blush font-semibold">A:</span> <span ref="text2"></span>
                                 </div>
 
-                                <!-- Turn 3 -->
                                 <div
                                     ref="turn3Q"
                                     class="opacity-0 rounded-lg rounded-tl-sm bg-white/[0.04] border border-white/[0.06] p-1.5 text-cream/90"
@@ -250,7 +239,6 @@ onMounted(() => {
                                     <span class="text-blush font-semibold">A:</span> <span ref="text3"></span>
                                 </div>
 
-                                <!-- Turn 4 -->
                                 <div
                                     ref="turn4Q"
                                     class="opacity-0 rounded-lg rounded-tl-sm bg-white/[0.04] border border-white/[0.06] p-1.5 text-cream/90"
@@ -266,7 +254,6 @@ onMounted(() => {
                             </div>
                         </div>
 
-                        <!-- Simulated Input Bar -->
                         <div
                             class="rounded-xl border border-white/[0.08] bg-white/[0.025] p-1.5 sm:p-2 backdrop-blur-sm flex items-center justify-between shadow-inner mt-1"
                         >

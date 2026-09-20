@@ -7,7 +7,7 @@ const activeIndex = ref(0);
 </script>
 
 <template>
-    <section id="experience" class="border-t border-white/[0.08] bg-ink py-32 md:py-48">
+    <section id="experience" class="border-t border-white/[0.08] bg-ink py-24 md:py-28">
         <div class="page-container">
             <SectionLabel number="02" label="Experience" />
 

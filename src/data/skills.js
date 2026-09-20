@@ -1,7 +1,22 @@
-export const skills = {
-    frontend: ["Vue 3", "JavaScript", "React", "Vite", "Tailwind CSS", "DevExtreme", "PrimeVue", "HTML", "CSS"],
-
-    api: ["REST API", "GraphQL", ".NET", "Node.js", "Apollo Client", "Axios"],
-
-    tools: ["Git", "GitLab", "Docker", "Postman", "Figma"],
-};
+export const skillCategories = [
+    {
+        category: "Front-End",
+        skills: ["Vue 3", "React", "TypeScript", "JavaScript", "Tailwind CSS", "DevExtreme", "HTML", "CSS"],
+    },
+    {
+        category: "Back-End",
+        skills: ["Node.js", "Express", "Laravel", ".NET", "Python"],
+    },
+    {
+        category: "Database & APIs",
+        skills: ["MySQL", "PostgreSQL", "MongoDB", "RESTful APIs", "GraphQL"],
+    },
+    {
+        category: "Tools & DevOps",
+        skills: ["Git", "Webpack", "npm", "Firebase", "Swagger", "CAST", "Docker"],
+    },
+    {
+        category: "Testing",
+        skills: ["Jest"],
+    },
+];

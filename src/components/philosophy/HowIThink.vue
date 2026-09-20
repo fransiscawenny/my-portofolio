@@ -7,43 +7,43 @@ const active = ref(0);
 const steps = [
     {
         number: "01",
-        title: "Understand",
-        description: "Start with the problem, users and business context before thinking about implementation.",
+        title: "Architect",
+        description: "Design scalable system boundaries, database schemas, and data flows before writing code.",
     },
     {
         number: "02",
-        title: "Design",
-        description: "Turn complex requirements into interfaces that feel simple and predictable.",
+        title: "Model",
+        description: "Structure relational or non-relational data efficiently to ensure long-term maintainability.",
     },
     {
         number: "03",
         title: "Build",
-        description: "Create reusable, maintainable components with a strong focus on frontend architecture.",
+        description: "Develop robust backend services and clean frontend components with strict type safety.",
     },
     {
         number: "04",
-        title: "Connect",
-        description: "Integrate APIs, state and business logic while keeping the user experience responsive.",
+        title: "Integrate",
+        description: "Connect client and server seamlessly with well-documented APIs, state management, and auth.",
     },
     {
         number: "05",
-        title: "Refine",
-        description: "Test, optimize and iterate until the product feels right—not just until it works.",
+        title: "Optimize",
+        description: "Tune queries, secure endpoints, and test end-to-end performance for production readiness.",
     },
 ];
 </script>
 
 <template>
-    <section class="border-t border-white/[0.08] bg-ink py-32 md:py-48">
+    <section class="border-t border-white/[0.08] bg-ink py-24 md:py-28">
         <div class="page-container">
             <SectionLabel number="04" label="How I think" />
 
             <div class="grid gap-16 lg:grid-cols-[0.6fr_1.4fr]">
                 <div>
                     <h2 class="display-font text-4xl font-medium leading-none tracking-tighter text-cream md:text-6xl">
-                        Good frontend
-                        <span class="text-cream/30"> starts before </span>
-                        the code.
+                        Great systems
+                        <span class="text-cream/30"> span from the </span>
+                        database to the UI.
                     </h2>
                 </div>
 

@@ -5,7 +5,7 @@ import { projects } from "../../data/projects";
 </script>
 
 <template>
-    <section id="work" class="border-t border-white/[0.08] bg-ink py-32 md:py-48">
+    <section id="work" class="border-t border-white/[0.08] bg-ink py-24 md:py-28">
         <div class="page-container">
             <SectionLabel number="03" label="Selected work" />
 

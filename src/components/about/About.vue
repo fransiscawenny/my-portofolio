@@ -3,7 +3,7 @@ import SectionLabel from "../common/SectionLabel.vue";
 </script>
 
 <template>
-    <section id="about" class="border-t border-white/[0.08] bg-ink py-32 md:py-48">
+    <section id="about" class="border-t border-white/[0.08] bg-ink py-24 md:py-28">
         <div class="page-container">
             <SectionLabel number="01" label="About me" />
 
@@ -14,35 +14,35 @@ import SectionLabel from "../common/SectionLabel.vue";
 
                 <div>
                     <h2 class="display-font text-balance text-4xl font-medium leading-[1.05] tracking-tighter text-cream md:text-6xl">
-                        I'm a frontend developer who enjoys turning
-                        <span class="text-cream/35"> complex problems </span>
-                        into products people can actually use.
+                        I build web apps that run fast
+                        <span class="text-cream/35"> behind the scenes </span>
+                        and feel effortless on the screen.
                     </h2>
 
                     <div class="mt-12 max-w-2xl space-y-5 text-base leading-7 text-mauve md:text-lg">
                         <p>
-                            My work sits between engineering, product thinking and user experience. I enjoy building interfaces that are not only
-                            visually polished, but also handle real-world business logic.
+                            A great digital product needs two things: a strong engine under the hood so nothing breaks, and a simple, friendly
+                            interface so anyone can use it without getting confused. I build both sides.
                         </p>
 
                         <p>
-                            From logistics platforms and marketplaces to data-heavy enterprise applications, I've worked across the full frontend
-                            development process — from understanding requirements to connecting APIs and shipping production features.
+                            From organizing complex business data to making sure every click feels smooth and instant, I turn complicated ideas into
+                            reliable software that real people actually enjoy using.
                         </p>
                     </div>
 
                     <div class="mt-12 flex flex-wrap gap-3">
-                        <a
-                            href="https://github.com/"
+                        <!-- <a
+                            href="https://github.com/fransiscawenny"
                             target="_blank"
                             rel="noopener noreferrer"
                             class="rounded-full border border-white/[0.08] px-5 py-3 text-sm text-mauve transition-all duration-300 hover:border-accent/40 hover:bg-accent/[0.04] hover:text-cream"
                         >
                             GitHub ↗
-                        </a>
+                        </a> -->
 
                         <a
-                            href="https://www.linkedin.com/"
+                            href="https://www.linkedin.com/in/fransisca-wenny-sinambela/"
                             target="_blank"
                             rel="noopener noreferrer"
                             class="rounded-full border border-white/[0.08] px-5 py-3 text-sm text-mauve transition-all duration-300 hover:border-accent/40 hover:bg-accent/[0.04] hover:text-cream"
@@ -51,9 +51,10 @@ import SectionLabel from "../common/SectionLabel.vue";
                         </a>
 
                         <a
-                            href="/resume.pdf"
+                            href="/CV_Fransisca_Wenny_Sinambela.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Download Fransisca Wenny Sinambela CV as a PDF file, opens in a new tab"
                             class="rounded-full bg-accent px-5 py-3 text-sm font-medium text-ink transition-all duration-300 hover:scale-105 hover:bg-blush hover:shadow-rose"
                         >
                             Resume ↗

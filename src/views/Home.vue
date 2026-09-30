@@ -6,7 +6,6 @@ import About from "../components/about/About.vue";
 import Experience from "../components/experience/Experience.vue";
 import Projects from "../components/projects/Projects.vue";
 import HowIThink from "../components/philosophy/HowIThink.vue";
-import Skills from "../components/skills/Skills.vue";
 import Contact from "../components/contact/Contact.vue";
 
 const isNavbarVisible = ref(false);
@@ -28,7 +27,6 @@ const handleNavbarVisibility = (visible) => {
             <Experience />
             <Projects />
             <HowIThink />
-            <Skills />
             <Contact />
         </main>
     </div>

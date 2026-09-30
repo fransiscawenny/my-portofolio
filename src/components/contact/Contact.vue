@@ -4,9 +4,9 @@ import SectionLabel from "../common/SectionLabel.vue";
 </script>
 
 <template>
-    <section id="contact" class="border-t border-white/[0.08] bg-ink py-32 md:py-48">
+    <section id="contact" class="border-t border-white/[0.08] bg-ink py-24 md:py-28">
         <div class="page-container">
-            <SectionLabel number="06" label="Contact" />
+            <SectionLabel number="05" label="Contact" />
 
             <div class="relative overflow-hidden rounded-[2rem] border border-white/[0.08] bg-plum p-8 md:p-16">
                 <div class="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-accent/[0.12] blur-3xl"></div>
@@ -23,7 +23,7 @@ import SectionLabel from "../common/SectionLabel.vue";
 
                     <div class="mt-12 flex flex-col gap-5 sm:flex-row sm:items-center">
                         <a
-                            href="mailto:your@email.com"
+                            href="mailto:fransiscawenny1004@gmail.com"
                             class="group inline-flex items-center justify-center gap-3 rounded-full bg-accent px-7 py-4 text-sm font-medium text-ink transition-all duration-300 hover:scale-105 hover:bg-blush hover:shadow-rose"
                         >
                             Get in touch
@@ -32,7 +32,7 @@ import SectionLabel from "../common/SectionLabel.vue";
                         </a>
 
                         <a
-                            href="https://www.linkedin.com/"
+                            href="https://www.linkedin.com/in/fransisca-wenny-sinambela/"
                             target="_blank"
                             rel="noopener noreferrer"
                             class="inline-flex items-center justify-center rounded-full border border-white/[0.08] px-7 py-4 text-sm text-mauve transition-all duration-300 hover:border-accent/40 hover:bg-accent/[0.04] hover:text-cream"

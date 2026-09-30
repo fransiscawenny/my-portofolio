@@ -1,3 +1,7 @@
+import logisticsDashboard from "../assets/images/logistics-dashboard.png";
+import mostransMarketPlace from "../assets/images/mostrans-marketplace.jpeg";
+import cagLogistic from "../assets/images/cag-logistic-platform.png";
+
 export const projects = [
     {
         id: 1,
@@ -10,7 +14,7 @@ export const projects = [
         role: "Frontend Developer",
         year: "2024 — Present",
         stack: ["Vue 3", "JavaScript", "Vite", "GraphQL", "REST API", "DevExtreme", "Tailwind CSS"],
-        image: "/images/logistics-dashboard.jpg",
+        image: logisticsDashboard,
         featured: true,
     },
 
@@ -25,7 +29,7 @@ export const projects = [
         role: "Frontend Developer",
         year: "2022 — 2024",
         stack: ["React", "JavaScript", "Node.js", "REST API"],
-        image: "/images/mostrans.jpg",
+        image: mostransMarketPlace,
         featured: true,
     },
 
@@ -40,7 +44,7 @@ export const projects = [
         role: "Frontend Developer",
         year: "2026",
         stack: ["Vue 3", "Vite", "Tailwind CSS", "GraphQL"],
-        image: "/images/logistics-dashboard.jpg",
+        image: cagLogistic,
         featured: true,
     },
 ];

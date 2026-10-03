@@ -41,6 +41,17 @@ const project = computed(() => projects.find((item) => item.slug === route.param
                         {{ project.description }}
                     </p>
 
+                    <a
+                        v-if="project.url"
+                        :href="project.url"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="group mt-8 inline-flex items-center gap-2 text-sm text-white transition-colors hover:text-accent"
+                    >
+                        View live project
+                        <ArrowUpRight :size="17" class="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
+                    </a>
+
                     <div class="mt-12 flex flex-wrap gap-2">
                         <span
                             v-for="technology in project.stack"

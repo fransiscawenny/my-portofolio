@@ -35,6 +35,7 @@ export const projects = [
         ],
         image: logisticsDashboard,
         featured: true,
+        url: "https://meratus-one.com/",
     },
     {
         id: 2,
@@ -68,6 +69,7 @@ export const projects = [
         ],
         image: mostransMarketPlace,
         featured: true,
+        url: "https://mostrans.co.id/CompanyProfile/",
     },
     {
         id: 3,
@@ -101,5 +103,6 @@ export const projects = [
         ],
         image: cagLogistic,
         featured: true,
+        url: "https://caglobal.id/",
     },
 ];

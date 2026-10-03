@@ -29,14 +29,24 @@ const text4 = ref(null);
 
 onMounted(() => {
     const particles = glitterRef.value.querySelectorAll(".g-particle");
-    particles.forEach((p) => {
-        gsap.to(p, {
-            opacity: 0.3,
-            duration: Math.random() * 2 + 1,
+    particles.forEach((particle) => {
+        gsap.to(particle, {
+            opacity: gsap.utils.random(0.2, 0.4),
+            duration: gsap.utils.random(1.5, 3.5),
             repeat: -1,
             yoyo: true,
             ease: "sine.inOut",
-            delay: Math.random() * 2,
+            delay: gsap.utils.random(0, 2),
+        });
+
+        gsap.to(particle, {
+            y: gsap.utils.random(-8, 8),
+            x: gsap.utils.random(-6, 6),
+            duration: gsap.utils.random(4, 8),
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+            delay: gsap.utils.random(0, 2),
         });
     });
 
@@ -157,7 +167,7 @@ onMounted(() => {
         <div class="relative z-10 flex h-full min-h-screen flex-col items-center justify-center p-0">
             <div
                 ref="phone"
-                class="relative h-[500px] w-[270px] sm:h-[550px] sm:w-[290px] md:h-[600px] md:w-[310px] overflow-hidden rounded-[38px] md:rounded-[44px] border-[5px] md:border-[6px] border-plumLight bg-plum shadow-[0_30px_90px_rgba(0,0,0,0.55)] my-auto"
+                class="relative z-30 h-[500px] w-[270px] sm:h-[550px] sm:w-[290px] md:h-[600px] md:w-[310px] overflow-hidden rounded-[38px] md:rounded-[44px] border-[5px] md:border-[6px] border-plumLight bg-plum shadow-[0_30px_90px_rgba(0,0,0,0.55)] my-auto"
             >
                 <div ref="phoneNotch" class="absolute left-1/2 top-2 z-20 h-5 w-20 md:h-6 md:w-24 -translate-x-1/2 rounded-full bg-ink"></div>
 

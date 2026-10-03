@@ -2,9 +2,11 @@ import { onMounted, onUnmounted } from "vue";
 import Lenis from "lenis";
 import { gsap } from "gsap";
 
-let lenisInstance = null;
+export let lenisInstance = null;
 
 export function useLenis() {
+    let update;
+
     onMounted(() => {
         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
             return;
@@ -18,6 +20,8 @@ export function useLenis() {
             touchMultiplier: 1,
         });
 
+        window.lenis = lenisInstance;
+
         const update = (time) => {
             lenisInstance?.raf(time * 1000);
         };
@@ -26,9 +30,10 @@ export function useLenis() {
         gsap.ticker.lagSmoothing(0);
 
         onUnmounted(() => {
-            gsap.ticker.remove(update);
+            if (update) gsap.ticker.remove(update);
             lenisInstance?.destroy();
             lenisInstance = null;
+            window.lenis = null;
         });
     });
 }

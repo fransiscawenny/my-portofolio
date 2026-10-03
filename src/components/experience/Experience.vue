@@ -44,7 +44,7 @@ const activeIndex = ref(0);
                                     {{ item.company }}
                                 </p>
 
-                                <p class="mt-5 max-w-xl text-sm leading-6 text-mauve">
+                                <p class="mt-5 max-w-xl text-sm leading-6 text-mauve text-justify">
                                     {{ item.description }}
                                 </p>
 

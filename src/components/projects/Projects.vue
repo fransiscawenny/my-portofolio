@@ -9,7 +9,7 @@ import { projects } from "../../data/projects";
         <div class="page-container">
             <SectionLabel number="03" label="Selected work" />
 
-            <div class="mb-20 grid gap-8 lg:grid-cols-[1fr_0.6fr]">
+            <div class="mb-14 grid gap-8 lg:grid-cols-[1fr_0.6fr]">
                 <h2 class="display-font text-balance text-5xl font-medium leading-[0.95] tracking-tighter text-cream md:text-7xl">
                     Work that
                     <span class="text-cream/30"> solves </span>
@@ -21,7 +21,7 @@ import { projects } from "../../data/projects";
                 </p>
             </div>
 
-            <div class="space-y-24 md:space-y-40">
+            <div class="space-y-16 md:space-y-24">
                 <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
             </div>
         </div>

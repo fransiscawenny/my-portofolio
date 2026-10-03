@@ -19,7 +19,7 @@ import SectionLabel from "../common/SectionLabel.vue";
                         and feel effortless on the screen.
                     </h2>
 
-                    <div class="mt-12 max-w-2xl space-y-5 text-base leading-7 text-mauve md:text-lg">
+                    <div class="mt-12 max-w-2xl space-y-5 text-base leading-7 text-mauve md:text-lg text-justify">
                         <p>
                             A great digital product needs two things: a strong engine under the hood so nothing breaks, and a simple, friendly
                             interface so anyone can use it without getting confused. I build both sides.

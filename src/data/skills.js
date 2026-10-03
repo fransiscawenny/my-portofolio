@@ -5,7 +5,7 @@ export const skillCategories = [
     },
     {
         category: "Back-End",
-        skills: ["Node.js", "Express", "Laravel", ".NET", "Python"],
+        skills: ["Node.js", "Express", "Laravel", ".NET", "Python", "Java"],
     },
     {
         category: "Database & APIs",
